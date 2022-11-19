@@ -1,4 +1,4 @@
-# Forked Blazepose with DepthAI tracking
+# Forked Blazepose with DepthAI and Real-Time Landmark Position Graph
 
 Run the following to use BlazeposeDepthaiEdge model with real time pose landmark positional data presented on a matplotlib graph.
 
@@ -9,6 +9,8 @@ python3 landmark_pos_demo.py -e
 Currently a work in progress and supports only right_wrist landmark y position (vertical)
 
 See below for original README instructions.
+
+
 
 
 # Blazepose tracking with DepthAI
