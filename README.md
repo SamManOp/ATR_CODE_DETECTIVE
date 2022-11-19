@@ -2,9 +2,11 @@
 
 Run the following to use BlazeposeDepthaiEdge model with real time pose landmark positional data presented on a matplotlib graph.
 
-    ```python3 landmark_pos_demo.py -e```
+```
+python3 landmark_pos_demo.py -e
+```
 
-Currently a work in progress and supports only right_wrist landmark position
+Currently a work in progress and supports only right_wrist landmark y position (vertical)
 
 See below for original README instructions.
 
