@@ -1,6 +1,6 @@
 # Forked Blazepose with DepthAI and Real-Time Landmark Position Graph
 
-Run the following to use BlazeposeDepthaiEdge model with real time pose landmark positional data presented on a matplotlib graph.
+**Run the following to use BlazeposeDepthaiEdge model with real time pose landmark positional data presented on a matplotlib graph.**
 
 ```
 python3 landmark_pos_demo.py -e
@@ -20,7 +20,7 @@ Install the python packages (depthai, opencv, open3d) with the following command
 python3 -m pip install -r requirements.txt
 ```
 
-## Run
+## Run Original Blazepose with DepthAI
 
 **Usage:**
 
