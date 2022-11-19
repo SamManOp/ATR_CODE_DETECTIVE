@@ -1,3 +1,12 @@
+# Forked Blazepose with DepthAI tracking
+
+Run the following to use BlazeposeDepthaiEdge model with real time pose landmark positional data presented on a matplotlib graph.
+
+Currently a work in progress and supports only right_wrist landmark position
+
+See below for original README instructions.
+
+
 # Blazepose tracking with DepthAI
 
 Running Google Mediapipe single body pose tracking models on [DepthAI](https://docs.luxonis.com/en/gen2/) hardware (OAK-1, OAK-D, ...). 
