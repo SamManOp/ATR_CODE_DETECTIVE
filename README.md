@@ -8,7 +8,7 @@ python3 landmark_pos_demo.py -e
 
 Currently a work in progress and supports only right_wrist landmark y position (vertical)
 
-See [depthai_blazepose](https://github.com/geaxgx/depthai_blazepose) for original README instructions.
+**See [depthai_blazepose](https://github.com/geaxgx/depthai_blazepose) for original README instructions.**
 
 
 ## Install
