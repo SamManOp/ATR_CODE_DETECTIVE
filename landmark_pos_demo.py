@@ -51,6 +51,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-e', '--edge', action="store_true",
                     help="Use Edge mode (postprocessing runs on the device)")
+
+    parser.add_argument('-l', '--landmark', type=str, default='right_wrist',
+                    help="Choose landmark to track")
+
     parser.add_argument("-m", "--model", type=str, choices=['full', 'lite', '831'], default='full',
                             help="Landmark model to use (default=%(default)s")
     parser.add_argument('-i', '--input', type=str, default='rgb',
@@ -76,6 +80,14 @@ def main():
 
     figure = plt.figure()
     ax = figure.add_subplot(1, 1, 1)
+
+    ax.set_title(f'{args.landmark} Vertical Position', 
+               fontweight ='bold')
+    ax.set_ylabel('Position', 
+               fontweight ='bold')
+    ax.set_xlabel('Frame', 
+               fontweight ='bold')
+
     xs = list(range(0, 500))
     ys = [0] * x_len_max
     ax.set_ylim(y_rangelim)
@@ -85,9 +97,8 @@ def main():
     body = None
     def animate(i, ys):
 
-        # Add y to list
         if body:
-            ypos = body.landmarks[mpu.KEYPOINT_DICT['right_wrist']][1]
+            ypos = body.landmarks[mpu.KEYPOINT_DICT[args.landmark]][1]
             ys.append(ypos)
 
             if ypos <= y_rangelim[0]:
@@ -98,10 +109,8 @@ def main():
                 ax.set_ylim(y_rangelim)
 
 
-            # Limit y list to set number of items
             ys = ys[-x_len_max:]
 
-            # Update line with new Y values
             line.set_ydata(ys)
 
         return line,
