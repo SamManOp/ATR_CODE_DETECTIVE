@@ -5,6 +5,7 @@
 ```
 python3 landmark_pos_demo.py -e
 ```
+This requires DepthAI hardware, i.e., OAK-D, OAK-1, etc...
 
 Currently a work in progress and defaulted to right_wrist landmark y position (vertical)
 
